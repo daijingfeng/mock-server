@@ -15,7 +15,7 @@ cd mock-server
 npm install
 npm run mock
 ```
-#### 访问下列接口地址
-+ 获取列表(get请求) ![getlist](http://owio6b4eo.bkt.clouddn.com/getlistimg.png)
-+ 获取详情(get请求) ![getdetail](http://owio6b4eo.bkt.clouddn.com/getdetailimg.png)
-+ 提交评价(post请求) ![comment](http://owio6b4eo.bkt.clouddn.com/commentimg.png)
+#### 接口地址
++ 获取列表 ![getlist](http://owio6b4eo.bkt.clouddn.com/getlistimg.png)
++ 获取详情 ![getdetail](http://owio6b4eo.bkt.clouddn.com/getdetailimg.png)
++ 提交评价 ![comment](http://owio6b4eo.bkt.clouddn.com/commentimg.png)
