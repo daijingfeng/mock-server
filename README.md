@@ -4,14 +4,18 @@
 ### Koa需要v7.6.0以上node版本，低于此版本请先升级node
 
 ### 使用到的库
-+ [koa](https://github.com/koajs/koa){:target="_blank"}
-+ [koa-router](https://github.com/alexmingoia/koa-router/tree/master/){:target="_blank"}
-+ [qs](https://github.com/ljharb/qs)
++ `koa`
++ `koa-router`
++ `qs`
 
+#### 执行操作：
 ```
 git clone https://github.com/daijingfeng/mock-server
+cd mock-server
 npm install
 npm run mock
 ```
 #### 访问下列接口地址
-+ [http://localhost:3000/api/getlist/0/10](http://localhost:3000/api/getlist/0/10){:target="_blank"}
++ 获取列表(get请求) ![getlist](http://owio6b4eo.bkt.clouddn.com/getlistimg.png)
++ 获取详情(get请求) ![getdetail](http://owio6b4eo.bkt.clouddn.com/getdetailimg.png)
++ 提交评价(post请求) ![comment](http://owio6b4eo.bkt.clouddn.com/commentimg.png)
