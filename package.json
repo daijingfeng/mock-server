@@ -1,0 +1,30 @@
+{
+  "name": "mock-server",
+  "version": "1.0.0",
+  "description": "mock server provide api",
+  "main": "index.js",
+  "scripts": {
+    "mock": "node ./server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/daijingfeng/mock-server.git"
+  },
+  "keywords": [
+    "webpack",
+    "react",
+    "mock",
+    "koa"
+  ],
+  "author": "daijingfeng",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/daijingfeng/mock-server/issues"
+  },
+  "homepage": "https://github.com/daijingfeng/mock-server#readme",
+  "devDependencies": {
+    "koa": "^2.3.0",
+    "koa-router": "^7.2.1",
+    "qs": "^6.5.1"
+  }
+}
