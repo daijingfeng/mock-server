@@ -16,6 +16,7 @@ npm install
 npm run mock
 ```
 #### 接口地址
-+ 获取列表 ![getlist](http://owio6b4eo.bkt.clouddn.com/getlistimg.png)
-+ 获取详情 ![getdetail](http://owio6b4eo.bkt.clouddn.com/getdetailimg.png)
-+ 提交评价 ![comment](http://owio6b4eo.bkt.clouddn.com/commentimg.png)
++ 获取列表 ![getlist](http://owio6b4eo.bkt.clouddn.com/getlist.png)
++ 获取详情 ![getdetail](http://owio6b4eo.bkt.clouddn.com/getdetail.png)
++ 提交评价成功 ![comment](http://owio6b4eo.bkt.clouddn.com/comment-ok.png)
++ 提交评价失败 ![comment](http://owio6b4eo.bkt.clouddn.com/comment-err.png)

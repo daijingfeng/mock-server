@@ -19,24 +19,23 @@ router.get('/api/getlist/:page/:limit', function (ctx, next) {
 	
 	const page = ctx.params.page;
 	const limit = ctx.params.limit;
-	console.log(page, limit)
 	const maxPage = listData.length / limit;
-	let res = {};
-	res.hasMore = true;
 	
-	if (page === undefined || limit === undefined) {
-		ctx.body = {
-			errno: 1,
-			msg: '缺少参数'
+	// 构造返回对象
+	let res = {
+		errno: 0,
+		data: {
+			hasMore: true,
+			data: []
 		}
-	} else {
-		res.errno = 0;
-		if ((page*1 + 1) >= maxPage) {
-			res.hasMore = false;
-		}
-		res.data = listData.slice(page*limit, page*limit + limit);
-	  	ctx.body = res;
+	};
+
+	// 如果超过最大页面数
+	if ((page*1 + 1) >= maxPage) {
+		res.data.hasMore = false;
 	}
+	res.data.data = listData.slice(page*limit, page*limit + limit);
+  	ctx.body = res;
 });
 
 /**
@@ -48,8 +47,15 @@ const detailData = require('./mock/detail/detail.js');
 router.get('/api/getdetail/:id', function (ctx, next) {
 
 	const id = ctx.params.id
+	let res = {
+		errno: 0,
+		data: {
+			data: []
+		}
+	}
+	res.data.data = detailData;
 	// todo...
-	ctx.body = detailData;
+	ctx.body = res;
 });
 
 /**
@@ -64,11 +70,17 @@ router.post('/api/comment', function (ctx, next) {
 	const id = params.id;
 	const uid = params.uid;
 	const msg = params.msg;
-	console.log(id, uid, msg);
-	// todo...
-	ctx.body = {
-		errno: 0,
-		msg: '评论成功'
+	if (id === undefined || uid === undefined || msg === undefined) {
+		ctx.body = {
+			errno: 1,
+			msg: '缺少参数'
+		}
+	} else {
+		// todo...
+		ctx.body = {
+			errno: 0,
+			msg: '评论成功'
+		}
 	}
 });
 
@@ -76,4 +88,4 @@ app
   .use(router.routes())
   .use(router.allowedMethods());
 app.listen(3000);
-console.log("server is running at localhost:3000");
+console.log("server is running at http://localhost:3000/");
